@@ -1,10 +1,9 @@
 <?php
 
-$grname = 'deborah mae viador de la cruze';
+$Button = "
+  <button onclick=\"location.href='index.php'\">始める</button>
+";
 
-$name= 'yuki yamada';
-
-echo '私の名前は、'.$name.'です。'
 
 ?>
 
@@ -16,6 +15,6 @@ echo '私の名前は、'.$name.'です。'
   <title>Document</title>
 </head>
 <body>
-  
+  <?php print $Button ?>
 </body>
 </html>
