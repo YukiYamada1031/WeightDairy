@@ -18,6 +18,7 @@ $record = "
   <title>Document</title>
 </head>
 <body>
+  <?php require_once('header.html') ?>
   <?php print $record ?><br>
 </body>
 </html>

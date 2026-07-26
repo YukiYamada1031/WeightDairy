@@ -14,6 +14,7 @@ $button = "
   <title>Document</title>
 </head>
 <body>
+  <?php require_once('header.html') ?>
   <?php print $confirm ?><br>
   <?php print $button ?>
 </body>

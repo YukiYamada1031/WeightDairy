@@ -15,6 +15,7 @@ $Button = "
   <title>Document</title>
 </head>
 <body>
+  <?php require_once('header.html') ?>
   <?php print $Button ?>
 </body>
 </html>
