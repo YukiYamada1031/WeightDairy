@@ -1,8 +1,7 @@
 <?php
 
-$confirm = '体重記録を完了しました。';
-$button = "
-<button onclick=\"location.href='index.php'\">一覧画面に戻る</button>
+$Button = "
+<button class='button-confirm' onclick=\"location.href='index.php'\">一覧画面に戻る</button>
 ";
 ?>
 
@@ -11,11 +10,15 @@ $button = "
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Weight Dairy　完了画面</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <?php require_once('header.html') ?>
-  <?php print $confirm ?><br>
-  <?php print $button ?>
+  <div class='confirm'>
+    <p>体重記録を完了しました。</p>
+    <br>
+    <?php print $Button ?>
+  </div>
 </body>
 </html>
