@@ -71,11 +71,11 @@ body {
 }
 
 #index-button .start-button {
-  background-color: rgb(251, 43, 43);
+  background-color: rgb(0, 213, 255);
 }
 
 #index-button .end-button {
-  background-color: rgb(0, 213, 255);
+  background-color: rgb(251, 43, 43);
 }
 
 #index-button .start-button:hover,
