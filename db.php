@@ -1,21 +1,26 @@
 <?php
 
-// db.php
-function getDbConnection() {
-  $dsn = 'mysql:host=localhost;dbname=your_db_name;charset=utf8mb4';
-  $user = 'your_username';
-  $password = 'your_password';
+$db_host = 'localhost';
+$db_name = 'weight_dairy';
+$db_user = 'root';
+$db_pass = ''
+$db_charset = 'utf8mb4';
 
-  try {
-      $pdo = new PDO($dsn, $user, $password, [
-          PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
-          PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
-      ]);
-      return $pdo;
-  } catch (PDOException $e) {
-      // 接続失敗時は処理を止めてエラー表示
-      die("DB接続エラー: " . htmlspecialchars($e->getMessage(), ENT_QUOTES, 'UTF-8'));
-  }
+// DSN（Data Source Name）の作成
+$dsn = 'mysql:host='.$db_host.';dbname='.$db_name.';charset='.$db_charset;
+
+// PDOのオプション設定
+$option = array(
+    PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+    PDO::ATTR_DEFAULT_FETCH => PDO::FETCH_ASSOC,
+    // SQLインジェクション対策
+    PDO::ARRT_EMULATE_PREPARES => false,    
+);
+
+try {
+    $pdo = new PDO($dsn, $db_user, $db_pass $option);
+} catch (PDOException $e) {
+    exit('DB接続エラー:'. $e->getMessage());
 }
 
 ?>
