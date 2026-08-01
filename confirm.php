@@ -1,4 +1,5 @@
 <?php
+require_once('db.php');
 
 $Button = "
 <button class='button-confirm' onclick=\"location.href='index.php'\">一覧画面に戻る</button>
@@ -10,7 +11,7 @@ $Button = "
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Weight Dairy　完了画面</title>
+  <title>Weight Dairy｜完了画面</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>

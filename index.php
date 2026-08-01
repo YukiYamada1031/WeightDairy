@@ -3,19 +3,19 @@ require_once('db.php');
 
 $Button = "
   <div id='index-button'>
-    <button class='start-button' onclick=\"location.href='record.php'\">本日の記録を始める</button>
-    <button class='end-button' onclick=\"location.href='top.php'\">トップ画面に戻る</button>
+    <button class='start-button' onclick=\"location.href='record.php'\">記録測定</button>
+    <button class='end-button' onclick=\"location.href='mypage.php'\">マイページ</button>
   </div>
 ";
 
-$sql = 'SELECT * FROM weight_record ORDER BY record_day ASC';
+$sql = 'SELECT * FROM weight_record ORDER BY create_day DESC';
 $stmt = $pdo->prepare($sql);
 $stmt->execute();
 $results = $stmt->fetchAll();
 
 $touroku = '';
 foreach($results as $result) {
-  $day = $result['record_day'];
+  $day = $result['create_day'];
   $weight = $result['weight'];
 
   $touroku .= '<tr>';
@@ -24,16 +24,6 @@ foreach($results as $result) {
   $touroku .= '</tr>';
 }
 
-$frame = "
-  <table>
-    <tr>
-      <th>日付</th>
-      <th>体重</th>
-    </tr>
-    {$touroku}
-  </table>
-";
-
 ?>
 
 <!DOCTYPE html>
@@ -41,18 +31,22 @@ $frame = "
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Weight Dairy　一覧ページ</title>
+  <title>Weight Dairy｜一覧ページ</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <?php require_once('header.html') ?>
   <div class='index'>
-    <div class='goal'>
-      <h2>減量の目標：</h2>
-    </div>
+    <?php print $Button; ?>
 
-    <?php print $Button ?>
-    <?php print $frame ?>
+    <table>
+      <tr>
+        <th>日付</th>
+        <th>体重</th>
+      </tr>
+      <?php print $touroku; ?>
+    </table>
   </div>
+
 </body>
 </html>

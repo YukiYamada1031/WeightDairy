@@ -92,6 +92,28 @@ body {
   text-align: center;
 }
 
+table{
+  width: 100%;
+  text-align: center;
+  padding: 100px 120px 40px 120px;
+}
+
+th{
+  font-size: 35px;
+  padding-bottom: 20px;
+}
+
+td{
+  font-size: 30px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  width: 50%
+}
+
+tr:last-child{
+  border: 1px solid #8e8d8d;
+}
+
 /* 測定画面のデザイン */
 .form {
   margin-top: 180px;
@@ -149,3 +171,5 @@ body {
 .button-confirm:active{
   opacity: 0.5;
 }
+
+/* マイページのデザイン */
