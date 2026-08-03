@@ -17,8 +17,8 @@ if(!empty($allinfo)){
   $name = $birthday = $goal = $reason = '登録されていません。';
 }
 
-$edit = "<button class='return-button' onclick=\"location.href='mypage_edit.php'\">変更する</button>";
-$return = "<button class='return-button' onclick=\"location.href='index.php'\">戻る</button>";
+$edit = "<button class='button edit' onclick=\"location.href='mypage_edit.php'\">変更する</button>";
+$return = "<button class='button return' onclick=\"location.href='index.php'\">戻る</button>";
 
 ?>
 
@@ -32,16 +32,26 @@ $return = "<button class='return-button' onclick=\"location.href='index.php'\">�
 </head>
 <body>
   <?php require_once('header.html') ?>
-  <div class='info'>
+  <div class="info">
     <h2>マイページ</h2>
-    <p>名前</p>
-    <?php print $name; ?>
-    <p>生年月日</p>
-    <?php print $birthday; ?>
-    <p>目標体重</p>
-    <?php print $goal; ?>
-    <p>痩せたいと思った理由</p>
-    <?php print $reason; ?>
+    <div class="flex-info">
+      <p>名前</p>
+      <div class="item-info">
+        <?php print $name; ?><br>
+      </div>
+      <p>生年月日</p>
+      <div class="item-info">
+        <?php print $birthday; ?><br>
+      </div>
+      <p>目標体重</p>
+      <div class="item-info">
+        <?php print $goal; ?><br>
+      </div>
+      <p>痩せたいと思った理由</p>
+      <div class="item-info">
+        <?php print $reason; ?><br>
+      </div>
+    </div>
     <?php print $edit; ?>
     <?php print $return; ?>
   </div>

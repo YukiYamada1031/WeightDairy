@@ -173,3 +173,63 @@ tr:last-child{
 }
 
 /* マイページのデザイン */
+.info{
+  text-align: center;
+  padding-top: 60px;
+}
+
+.info h2{
+  margin-bottom: 30px;
+}
+
+.info .flex-info{
+  margin: 80px auto;
+  max-width: 800px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.flex-info p{
+  width: 50%;
+  margin-bottom: 50px;
+}
+
+.flex-info .item-info{
+  width: 50%;
+  margin-bottom: 50px;
+}
+
+.info .button{
+  width: 100px;
+  height: 50px;
+  border-radius: 10px;
+  border: 0.2px solid #8e8d8d;
+  color: white;
+  font-weight: 50px;
+}
+
+.info .edit{
+  background-color: #2727cb;
+}
+
+.info .edit:hover{
+  opacity: 0.7;
+}
+
+.info .edit:active{
+  opacity: 0.5;
+}
+
+.info .return{
+  background-color: #cb2727;
+}
+
+.info .return:hover{
+  opacity: 0.7;
+}
+
+.info .return:active{
+  opacity: 0.5;
+}
