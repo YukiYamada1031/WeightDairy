@@ -18,20 +18,33 @@ if(!empty($allinfo)){
 }
 
 $input = "
-  <form action='mypage_update.php' method='POST'>
-    <label for='name'>名前</label>
-    <input id='name' name='name' value={$name}>
-    <label for='birthday'>生年月日</label>
-    <input id='birthday' name='birthday' value={$birthday}>
-    <label for='goal'>目標</label>
-    <input id='goal' name='goal' value={$goal}>
-    <label for='reason'>痩せたいと思った理由</label>
-    <input id='reason' name='reason' value={$reason}>
-    <input class='submit-info' type='submit' value='更新'>
+  <form action='mypage_update.php' method='POST' class='edit-form'>
+    <div class='form-group'>
+      <label for='name' class='label'>名前</label>
+      <input id='name' name='name' value='{$name}' class='input'>
+    </div>
+
+    <div class='form-group'>
+      <label for='birthday' class='label'>生年月日</label>
+      <input id='birthday' name='birthday' value='{$birthday}' class='input'>
+    </div>
+
+    <div class='form-group'>
+      <label for='goal' class='label'>目標</label>
+      <input id='goal' name='goal' value='{$goal}' class='input'>
+    </div>
+
+    <div class='form-group'>
+      <label for='reason' class='label'>痩せたいと思った理由</label>
+      <input id='reason' name='reason' value='{$reason}' class='input'>
+    </div>
+
+    <div class='button-group'>
+      <input class='submit-info' type='submit' value='更新'>
+      <button class='return-button' type='button' onclick=\"location.href='mypage.php'\">戻る</button>
+    </div>
   </form>
 ";
-
-$return = "<button class='return-button' onclick=\"location.href='mypage.php'\">戻る</button>";
 
 ?>
 
@@ -41,12 +54,14 @@ $return = "<button class='return-button' onclick=\"location.href='mypage.php'\">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Weight Dairey1｜編集画面</title>
-  <link rel='styleshett' href='style.css'>
+  <link rel='stylesheet' href='style.css'>
 </head>
 <body>
   <?php require_once('header.html') ?>
-  <?php print $input; ?>
-  <?php print $return; ?>
+  <div class='info-edit'>
+    <h2>マイページ編集</h2>
+    <?php print $input; ?>
+  </div>
   </div>
 </body>
 </html>
