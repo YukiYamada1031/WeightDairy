@@ -8,7 +8,7 @@ $Button = "
   </div>
 ";
 
-$sql = 'SELECT * FROM weight_record ORDER BY create_day DESC';
+$sql = 'SELECT * FROM weight_record ORDER BY create_day DESC limit 5';
 $stmt = $pdo->prepare($sql);
 $stmt->execute();
 $results = $stmt->fetchAll();
