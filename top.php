@@ -14,7 +14,7 @@ $Button = "
   <title>Weight Dairy</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class='body-top'>
   <?php require_once('header.html') ?>
   <div class="message">
     <h1>Weight Dairy</h1>

@@ -12,15 +12,25 @@ body {
 }
 
 /* トップ画面のデザイン */
+.body-top{
+  min-height: 100vh;
+  background-image: url(./excise.jpg);
+  object-fit: cover;
+  /* background-position: center;  画像の中心を基準にする */
+  background-repeat: no-repeat; /* 繰り返し表示をオフ */
+}
+
 .message {
   width: 1200px;
   margin: 0 auto;
   text-align: center;
+  color: white;
 }
 
 .message h1 {
   font-weight: 100;
   font-size: 180px;
+  font-family: cursive;
   margin-top: 40px;
   margin-bottom: 40px;
 }
@@ -34,7 +44,7 @@ body {
   padding: 20px 80px;
   border-radius: 10px;
   border-width: 0px;
-  background-color: rgb(35, 247, 28);
+  background-color: rgb(96, 225, 91);
   color: white;
   font-size: x-large;
 }
