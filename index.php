@@ -38,7 +38,9 @@ foreach($results as $result) {
   <?php require_once('header.html') ?>
   <div class='index'>
     <?php print $Button; ?>
-
+    <div class='index-title'>
+      <h2>＜直近５日間の測定結果＞</h2>
+    </div>
     <table>
       <tr>
         <th>日付</th>
