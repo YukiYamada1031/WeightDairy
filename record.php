@@ -1,10 +1,16 @@
 <?php
 require_once('db.php');
 
+$sql = 'SELECT weight FROM weight_record ORDER By record_day DESC limit 1';
+$stmt = $pdo->prepare($sql);
+$stmt->execute();
+$values = $stmt->fetch();
+$value = $values['weight'];
+
 $Record = "
 <form class='form' action=\"store.php\" method=\"POST\">
 <label class='label' for=\"weight\">本日の体重：</label>
-<input class='input' type=\"number\" id=\"weight\" name=\"weight\" step=\"0.1\" value=\"64.5\" required><br>
+<input class='input' type=\"number\" id=\"weight\" name=\"weight\" step=\"0.1\" value={$value} required><br>
 <input class='submit' type=submit value=\"確定\">
 </form>
 ";
